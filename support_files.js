@@ -13,19 +13,20 @@ function index_file(data){
             '</body></html>'].join('');    
 }
 
-function book_file(){
+function book_file(author, title){
     return ['<?xml version="1.0"?>',
             '<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">',
             '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">',
-            '<dc:title>Pride and Prejudice</dc:title>',
+            '<dc:title>' + title + '</dc:title>',
             '<dc:language>en</dc:language>',
             '<dc:identifier id="BookId" opf:scheme="ISBN">123456789X</dc:identifier>',
-            '<dc:creator opf:file-as="Austen, Jane" opf:role="aut">Jane Austen</dc:creator>',
+            '<dc:creator opf:file-as="' + author + '" opf:role="aut">' + author + '</dc:creator>',
             '</metadata>',
             '<manifest>',
             '<item id="index" href="index.html" media-type="application/xhtml+xml"/>',
             '<item id="stylesheet" href="styles.css" media-type="text/css"/>',
             '<item id="ncx" href="book.ncx" media-type="application/x-dtbncx+xml"/>',
+            '<item id="myfont" href="Lohit-Kannada.ttf" media-type="application/x-truetype-font"/>',
             '</manifest>',
             '<spine toc="ncx">',
             '<itemref idref="index" />',
@@ -36,22 +37,22 @@ function book_file(){
             '</package>'].join('');
 }
 
-function book_ncx_file(){
+function book_ncx_file(author, title){
     return ['<?xml version="1.0" encoding="UTF-8"?>',
             '<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"',
             '"http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">',
             '<ncx version="2005-1" xml:lang="en" xmlns="http://www.daisy.org/z3986/2005/ncx/">',
             '<head>',
-            '<meta name="dtb:uid" content="123456789X"/> <!-- same as in .opf -->',
-            '<meta name="dtb:depth" content="1"/> <!-- 1 or higher -->',
-            '<meta name="dtb:totalPageCount" content="0"/> <!-- must be 0 -->',
-            '<meta name="dtb:maxPageNumber" content="0"/> <!-- must be 0 -->',
+            '<meta name="dtb:uid" content="123456789X"/> ',
+            '<meta name="dtb:depth" content="1"/> ',
+            '<meta name="dtb:totalPageCount" content="0"/> ',
+            '<meta name="dtb:maxPageNumber" content="0"/> ',
             '</head>',
             '<docTitle>',
-            '<text>Pride and Prejudice</text>',
+            '<text>' + title + '</text>',
             '</docTitle>',
             '<docAuthor>',
-            '<text>Austen, Jane</text>',
+            '<text>' + author + '</text>',
             '</docAuthor>',
             '<navMap>',
             '<navPoint class="chapter" id="index" playOrder="1">',

@@ -1,2 +1,5 @@
-files/*
-tmp/*
+files/*.epub
+tmp/*.html
+tmp/*.xml
+tmp/*.opf
+tmp/*.ncx

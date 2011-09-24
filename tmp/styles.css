@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Lohit Kannada";
+    font-weight: normal;
+    font-style: normal;
+    src: url(Lohit-Kannada.ttf);
+}
+body {
+    font-family: "Lohit Kannada", sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
