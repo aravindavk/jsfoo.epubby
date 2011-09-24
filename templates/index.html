@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/static/app.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/jquery-1.5.js"></script>
+    <script type="text/javascript" src="/static/app.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>EPubby</h1>
+        <p>Generate epub from RSS feeds</p>
+      </div>
+      <div id="msg" style="display:none"></div>
+      <div id="form">
+        <p>Submit RSS link of your website, this application will generate ebook in epub format.</p>
+        <p>&nbsp;</p>
+        <label>Title</label>
+        <input type="text" name="title" value="" id="title" class="txt"/><br />
+        <label>Author</label>
+        <input type="text" name="author" value="" id="author" class="txt" /><br />
+        <label>RSS Link</label>
+        <input type="text" name="url" value="" class="txt" id="url"/><br />
+        <input type="button" name="" id="generate" value="Generate" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      app_init();
+      });
+    </script>
+  </body>
+</html>
+
