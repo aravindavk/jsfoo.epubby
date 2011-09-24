@@ -3,8 +3,8 @@ var fs = require("fs");
 var request = require('request');
 var jsdom = require('jsdom');
 var sys = require('sys');
-var rss = require('./lib/node-rss/node-rss');
-var file_tmpl = require('./support_files');
+var rss = require(__dirname + '/lib/node-rss/node-rss');
+var file_tmpl = require(__dirname + '/support_files');
 
 var myfiles = [{"name" : __dirname + "/tmp/mimetype", "path": "mimetype"}, 
                {"name" : __dirname + "/tmp/styles.css", "path": "styles.css"},

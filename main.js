@@ -3,9 +3,9 @@ var url = require("url");
 var qs = require("querystring");
 var staticfiles = require('node-static');
 var request = require('request');
-var epubby = require("./generate_epub");
+var epubby = require(__dirname + "/generate_epub");
 var fs = require("fs");
-var mustache = require("./static/mustache");
+var mustache = require(__dirname + "/static/mustache");
 
 function serve_epub(req, res){
     var file = new(staticfiles.Server)(__dirname);
