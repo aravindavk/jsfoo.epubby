@@ -127,7 +127,7 @@ function extract_data(articledata, req, res, params) {
 }
 
 function epubby_init(req, res, params){
-
+    params.url = params.url.replace("http://", "").replace("https://","");
     var options = {
         url: params.url,
         title : params.title,

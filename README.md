@@ -20,12 +20,23 @@ Website will start running in port 8080. http://localhost:8080
 4. Faster ebook generation using RSS feed.(Compared to ebook generation by scraping webpages)
 5. Change the RSS feed setting in your website to display complete content in RSS and then generate ebook. We can revert the RSS setting to default once ebook generated :) 
 
+## Screenshots
+
+![Homepage](https://github.com/aravindavk/jsfoo.epubby/raw/master/homepage.png)
+![Result page](https://github.com/aravindavk/jsfoo.epubby/raw/master/result.png)
+
 ## Limitations
 
 1. If RSS feeds have only partial content, then this app may not be useful.
 2. If the number of feeds in RSS is limited, it will get only those feeds and creates ebook.
 
+## Issues
+
+1. Validations are not done yet.
+2. Crashes after first run :( (RSS parsing library is giving some error)
+
 ## TODO
+
 1. Image download code is available, but it is very messy. Have to cleanup the code to download images and update the manifest accordingly.
 2. Unicode font embeding is not working. 
 3. Navigation menus and Chapter split into new pages.
